@@ -87,7 +87,7 @@ spec:
            path: /run
        - name: save
          hostPath:
-           path: /var/hyperledger/$peerNumber
+           path: /opt/share/hyperledger/$peerNumber
        
 
 ---
