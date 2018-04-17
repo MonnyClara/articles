@@ -76,6 +76,8 @@ spec:
            subPath: $tlsPath
          - mountPath: /host/var/run/
            name: run
+         - mountPath: /var/hyperledger/production
+           name: save
       volumes:
        - name: certificate
          persistentVolumeClaim:
@@ -83,6 +85,9 @@ spec:
        - name: run
          hostPath:
            path: /run
+       - name: save
+         hostPath:
+           path: /var/hyperledger/$peerNumber
        
 
 ---
