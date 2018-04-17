@@ -116,7 +116,7 @@ def configPEERS(name, path): # name means peerid.
 	nodePort1 = exposedPort1,
 	nodePort2 = exposedPort2,
         pvName = orgName + "-pv",
-	peerNumber = peerName
+	peerNumber = peerName + "-" + orgName
 	)
 
 
