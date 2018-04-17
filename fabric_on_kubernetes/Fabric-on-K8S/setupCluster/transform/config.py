@@ -115,7 +115,8 @@ def configPEERS(name, path): # name means peerid.
 	tlsPath = tlsPathTemplate.format(name),
 	nodePort1 = exposedPort1,
 	nodePort2 = exposedPort2,
-        pvName = orgName + "-pv"
+        pvName = orgName + "-pv",
+	peerNumber = peerName
 	)
 
 
