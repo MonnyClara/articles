@@ -83,6 +83,8 @@ spec:
              subPath: $mspPath
            - mountPath: /opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
              name: artifacts
+           - mountPath: /var/hyperledger/production
+             name: save
       volumes:
         - name: certificate
           persistentVolumeClaim:
@@ -92,4 +94,8 @@ spec:
               claimName: $artifactsName
         - name: run
           hostPath:
-            path: /var/run 
+            path: /var/run
+        - name: save
+          hostPath:
+            path: /var/hyperledger/peer0
+            
