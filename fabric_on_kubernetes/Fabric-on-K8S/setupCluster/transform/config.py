@@ -142,7 +142,8 @@ def configORDERERS(name, path): # name means ordererid
 	mspPath= mspPathTemplate.format(name),
 	tlsPath= tlsPathTemplate.format(name),
 	nodePort = exposedPort,
-	pvName = orgName + "-pv"
+	pvName = orgName + "-pv",
+	orgNumber = ordererName + "-" + orgName
 	)
 
 
