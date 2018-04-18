@@ -56,6 +56,8 @@ spec:
          - mountPath: /var/hyperledger/orderer/orderer.genesis.block
            name: certificate
            subPath: genesis.block
+         - mountPath: /var/hyperledger
+           name: save
       volumes:
        - name: certificate
          persistentVolumeClaim:
@@ -63,6 +65,9 @@ spec:
            #path: /opt/share
          #persistentVolumeClaim:
          #  claimName: nfs
+       - name: save
+         hostPath: 
+           path: /opt/share/hyperledger/$orgNumber
 
 
 ---
