@@ -53,6 +53,7 @@ def deletePeers(path):
 def checkAndDelete(f):
 	if os.path.isfile(f):
 		os.system("kubectl delete -f " + f)
+	os.system("rm -fr /opt/share/*")
 
 if __name__ == "__main__":
 	deleteOrderers(ORDERER)
